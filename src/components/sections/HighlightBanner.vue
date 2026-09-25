@@ -3,7 +3,7 @@ const highlights = ['Belajar Digital', 'Komunitas Mahasiswa', 'Prestasi', 'AIK']
 </script>
 
 <template>
-  <section class="px-4 py-3 sm:px-6 lg:px-10">
+  <section class="px-4 py-3 md:py-20 sm:px-6 lg:px-10">
     <div class="relative mx-auto max-w-[1440px] overflow-hidden rounded-3xl bg-primary-600 px-6 py-10 sm:px-10 sm:py-12">
       <div class="pointer-events-none absolute -top-16 -right-16 size-64 rounded-full bg-cyan-400/30 blur-3xl" aria-hidden="true" />
       <div class="pointer-events-none absolute -bottom-24 left-1/3 size-72 rounded-full bg-primary-400/30 blur-3xl" aria-hidden="true" />

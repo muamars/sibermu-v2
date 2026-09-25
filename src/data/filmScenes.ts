@@ -8,8 +8,8 @@ export interface FilmScene {
 
 export const filmScenes: FilmScene[] = [
   {
-    eyebrow: 'Kampus Digital · Islam Berkemajuan',
-    title: 'Belajar tanpa batas.\nBertumbuh bersama.\nBerdampak untuk umat.',
+    eyebrow: 'Kampus Digital Islam Berkemajuan',
+    title: 'Tumbuh bersama Sibermu.',
     body: 'SiberMu bukan hanya ruang untuk kuliah. Di sini, mahasiswa belajar, membangun relasi, dan tumbuh bersama nilai Islam Berkemajuan.',
     position: 'center',
     variant: 'hero',

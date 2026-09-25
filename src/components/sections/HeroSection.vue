@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 </script>
 
 <template>
-  <section id="beranda" class="px-4 pt-6 sm:px-6 lg:px-10">
+  <section id="beranda" class="px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-28">
     <div class="relative mx-auto max-w-[1440px] overflow-hidden rounded-3xl sm:rounded-[32px]">
       <div class="absolute inset-0">
         <ImagePlaceholder tone="navy" label="Foto suasana belajar digital mahasiswa SiberMu" rounded="rounded-none" />
@@ -32,9 +32,7 @@ import { Button } from '@/components/ui/button'
 
         <div class="flex flex-col gap-6">
           <h1 class="max-w-2xl text-balance text-[42px] leading-[1.02] font-extrabold tracking-tight text-white sm:text-[64px] lg:text-[76px]">
-            Belajar tanpa batas.
-            Bertumbuh bersama.
-            Berdampak untuk umat.
+              Tumbuh bersama Sibermu.
           </h1>
 
           <p class="max-w-md text-base leading-relaxed text-white/80 sm:text-lg">
