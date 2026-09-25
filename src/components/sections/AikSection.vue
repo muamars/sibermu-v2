@@ -16,7 +16,7 @@ const icons = { BookOpen, Radio, Sparkles, HandHeart }
     <div class="pointer-events-none absolute top-10 right-[-80px] size-72 rounded-full border border-aik-400/20" aria-hidden="true" />
     <div class="pointer-events-none absolute top-24 right-[-40px] size-56 rounded-full border border-aik-400/20" aria-hidden="true" />
 
-    <div class="relative mx-auto max-w-[1280px]">
+    <div class="relative mx-auto max-w-[1440px]">
       <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
         <SectionHeading
           eyebrow="Al-Islam & Kemuhammadiyahan"

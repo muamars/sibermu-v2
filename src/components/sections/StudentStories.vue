@@ -6,7 +6,7 @@ import { testimonials } from '@/data/testimonials'
 
 <template>
   <section id="cerita" class="px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-28">
-    <div class="mx-auto max-w-[1280px]">
+    <div class="mx-auto max-w-[1440px]">
       <SectionHeading
         align="center"
         eyebrow="Cerita Mahasiswa"

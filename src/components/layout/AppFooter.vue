@@ -50,7 +50,7 @@ const mediaCredits = [
     <div class="mx-auto max-w-[1440px] px-4 pt-16 pb-8 sm:px-6 lg:px-10">
       <div class="grid gap-12 lg:grid-cols-[1.3fr_2fr]">
         <div class="flex flex-col gap-4">
-          <img :src="logoWhite" alt="Universitas Siber Muhammadiyah" class="h-9 w-auto" />
+          <img :src="logoWhite" alt="Universitas Siber Muhammadiyah" class="h-auto w-6/12" />
           <p class="max-w-sm text-sm leading-relaxed text-white/60">
             Kampus digital yang menghadirkan pembelajaran fleksibel, komunitas yang dekat,
             dan nilai Islam Berkemajuan.

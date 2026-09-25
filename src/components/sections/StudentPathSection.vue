@@ -7,7 +7,7 @@ import { studentPath } from '@/data/studentPath'
 
 <template>
   <section class="px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-28">
-    <div class="relative mx-auto max-w-[1280px] overflow-hidden rounded-[28px]">
+    <div class="relative mx-auto max-w-[1440px] overflow-hidden rounded-[28px]">
       <div class="absolute inset-0">
         <ImagePlaceholder tone="neutral" label="Foto suasana kampus digital SiberMu" rounded="rounded-none" />
         <div class="absolute inset-0 bg-navy-950/50" />

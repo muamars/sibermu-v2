@@ -5,7 +5,7 @@ import ImagePlaceholder from '@/components/common/ImagePlaceholder.vue'
 
 <template>
   <section class="px-4 py-16 sm:px-6 sm:py-20 lg:px-10">
-    <div class="relative mx-auto max-w-[1280px] overflow-hidden rounded-[28px] bg-primary-600 px-6 py-12 sm:px-10 sm:py-16">
+    <div class="relative mx-auto max-w-[1440px] overflow-hidden rounded-[28px] bg-primary-600 px-6 py-12 sm:px-10 sm:py-16">
       <div class="pointer-events-none absolute -top-24 right-10 size-64 rounded-full bg-cyan-400/25 blur-3xl" aria-hidden="true" />
 
       <div class="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">

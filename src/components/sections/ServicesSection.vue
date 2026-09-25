@@ -8,7 +8,7 @@ const icons = { GraduationCap, Wallet, MessageCircle, ClipboardList, Briefcase, 
 
 <template>
   <section id="layanan" class="px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-28">
-    <div class="mx-auto max-w-[1280px]">
+    <div class="mx-auto max-w-[1440px]">
       <SectionHeading
         eyebrow="Layanan Mahasiswa"
         title="Ada yang mendukungmu di setiap perjalanan."

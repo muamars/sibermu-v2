@@ -4,7 +4,7 @@ import { HandHeart, Sparkles, Users } from '@lucide/vue'
 
 <template>
   <section class="px-4 py-14 sm:px-6 lg:px-10">
-    <div class="mx-auto max-w-[1280px] rounded-3xl border border-border bg-surface px-6 py-10 sm:px-10 sm:py-14">
+    <div class="mx-auto max-w-[1440px] rounded-3xl border border-border bg-surface px-6 py-10 sm:px-10 sm:py-14">
       <div class="flex flex-col items-center gap-4 text-center">
         <h2 class="text-balance text-[26px] leading-[1.15] font-extrabold text-foreground sm:text-[32px]">
           Aktif dalam kegiatan. Kuat dalam nilai.

@@ -13,7 +13,7 @@ const toneCardClasses: Record<string, string> = {
 
 <template>
   <section id="kemahasiswaan" class="px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-28">
-    <div class="mx-auto max-w-[1280px]">
+    <div class="mx-auto max-w-[1440px]">
       <div class="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
         <SectionHeading
           eyebrow="Kemahasiswaan"
