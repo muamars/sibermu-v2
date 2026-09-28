@@ -2,6 +2,7 @@
 import { usePrefersReducedMotion } from '@/composables/usePrefersReducedMotion'
 import AppFooter from '@/components/layout/AppFooter.vue'
 import AppNavbar from '@/components/layout/AppNavbar.vue'
+import ChatbotWidget from '@/components/common/ChatbotWidget.vue'
 import ScrollProgressBar from '@/components/layout/ScrollProgressBar.vue'
 import AboutSection from '@/components/sections/AboutSection.vue'
 import AchievementSection from '@/components/sections/AchievementSection.vue'
@@ -42,4 +43,5 @@ const prefersReducedMotion = usePrefersReducedMotion()
   </main>
 
   <AppFooter />
+  <ChatbotWidget />
 </template>
