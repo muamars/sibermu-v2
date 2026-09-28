@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { Bot, LoaderCircle, MessageCircle, Send, X } from '@lucide/vue'
+import { LoaderCircle, Send, X } from '@lucide/vue'
 import { nextTick, ref, watch } from 'vue'
+import sahabatMu from '@/assets/SahabatMu.webp'
 
 type ChatMessage = {
   id: number
@@ -60,23 +61,27 @@ async function sendMessage() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message, sessionId: getSessionId() }),
     })
-    if (!response.ok) throw new Error(`HTTP ${response.status}`)
-
     const contentType = response.headers.get('content-type') ?? ''
     const data: unknown = contentType.includes('application/json')
       ? await response.json()
       : await response.text()
+    if (!response.ok) {
+      const detail = extractReply(data) || (typeof data === 'string' ? data : '')
+      throw new Error(detail ? `Server ${response.status}: ${detail}` : `Server ${response.status}`)
+    }
     const reply = extractReply(data)
     messages.value.push({
       id: nextMessageId++,
       role: 'assistant',
       text: reply || 'Pesan diterima. Silakan tanyakan hal lain jika masih membutuhkan bantuan.',
     })
-  } catch {
+  } catch (error) {
     messages.value.push({
       id: nextMessageId++,
       role: 'assistant',
-      text: 'Maaf, chatbot belum dapat terhubung. Silakan coba beberapa saat lagi.',
+      text: error instanceof Error && error.message.startsWith('Server ')
+        ? `Chatbot gagal memproses pesan. ${error.message}`
+        : 'Maaf, chatbot belum dapat terhubung. Silakan coba beberapa saat lagi.',
     })
   } finally {
     sending.value = false
@@ -106,10 +111,10 @@ watch(panelOpen, (open) => {
       >
         <header class="flex items-center gap-3 bg-primary-700 px-5 py-4 text-white">
           <div class="flex size-10 items-center justify-center rounded-2xl bg-white/15">
-            <Bot class="size-5" />
+            <img :src="sahabatMu" alt="SahabatMu" class="size-9 rounded-xl object-cover" />
           </div>
           <div class="min-w-0 flex-1">
-            <h2 class="font-semibold">Asisten SiberMu</h2>
+            <h2 class="font-semibold">SahabatMu</h2>
             <p class="text-xs text-white/75">Siap membantu pertanyaan Anda</p>
           </div>
           <button type="button" class="rounded-full p-2 transition hover:bg-white/15" aria-label="Tutup chatbot" @click="panelOpen = false">
@@ -161,8 +166,8 @@ watch(panelOpen, (open) => {
       @click="panelOpen = !panelOpen"
     >
       <X v-if="panelOpen" class="size-5" />
-      <MessageCircle v-else class="size-5" />
-      <span class="text-sm font-semibold">{{ panelOpen ? 'Tutup' : 'Chat dengan kami' }}</span>
+      <img v-else :src="sahabatMu" alt="" class="size-9 rounded-full object-cover" />
+      <span class="text-sm font-semibold">{{ panelOpen ? 'Tutup' : 'Tanya SahabatMu' }}</span>
     </button>
   </div>
 </template>
