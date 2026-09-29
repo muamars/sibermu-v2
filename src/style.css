@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=TASA+Explorer:wght@400..800&display=swap");
 
 @import 'tailwindcss';
 @import 'tw-animate-css';
@@ -19,7 +19,7 @@
   --primary: #092845;
   --primary-foreground: #ffffff;
   --secondary: #f2f5f7;
-  --secondary-foreground: #092845;
+  --secondary-foreground: #0787AE;
   --muted: #f7f8fa;
   --muted-foreground: #64748b;
   --accent: #e6ecf1;
@@ -32,7 +32,7 @@
 }
 
 @theme inline {
-  --font-sans: 'Inter Tight', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'TASA Explorer', system-ui, 'Segoe UI', Roboto, sans-serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { LoaderCircle, Send, X } from '@lucide/vue'
 import { nextTick, ref, watch } from 'vue'
-import sahabatMu from '@/assets/SahabatMu.webp'
+import aisa from '@/assets/aisa.webp'
 
 type ChatMessage = {
   id: number
@@ -9,7 +9,7 @@ type ChatMessage = {
   text: string
 }
 
-const webhookUrl = 'http://10.50.50.61:5678/webhook/sibermu'
+const chatApiUrl = '/api/chat'
 const sessionStorageKey = 'sibermu-chat-session-id'
 const panelOpen = ref(false)
 const draft = ref('')
@@ -56,7 +56,7 @@ async function sendMessage() {
   await scrollToLatest()
 
   try {
-    const response = await fetch(webhookUrl, {
+    const response = await fetch(chatApiUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message, sessionId: getSessionId() }),
@@ -95,7 +95,7 @@ watch(panelOpen, (open) => {
 </script>
 
 <template>
-  <div class="fixed right-4 bottom-4 z-[60] flex flex-col items-end gap-3 sm:right-6 sm:bottom-6">
+  <div class="fixed right-4 bottom-8 z-[60] flex flex-col items-end gap-3 sm:right-6 sm:bottom-12">
     <Transition
       enter-active-class="transition duration-200 ease-out"
       enter-from-class="translate-y-3 scale-95 opacity-0"
@@ -106,15 +106,15 @@ watch(panelOpen, (open) => {
     >
       <section
         v-if="panelOpen"
-        class="flex h-[min(620px,calc(100dvh-112px))] w-[min(380px,calc(100vw-32px))] flex-col overflow-hidden rounded-[28px] border border-black/10 bg-white shadow-2xl shadow-slate-900/20"
-        aria-label="Chatbot SiberMu"
+        class="flex h-[min(620px,calc(100dvh-112px))] w-[min(380px,calc(100vw-32px))] flex-col overflow-hidden shadow-2xl shadow-slate-900/20"
+        aria-label="Chatbot Aisa"
       >
-        <header class="flex items-center gap-3 bg-primary-700 px-5 py-4 text-white">
+        <header class="flex items-center gap-3 px-5 py-4 text-white">
           <div class="flex size-10 items-center justify-center rounded-2xl bg-white/15">
-            <img :src="sahabatMu" alt="SahabatMu" class="size-9 rounded-xl object-cover" />
+            <img :src="aisa" alt="aisa" class="size-9 object-cover" />
           </div>
           <div class="min-w-0 flex-1">
-            <h2 class="font-semibold">SahabatMu</h2>
+            <h2 class="font-semibold">Aisa</h2>
             <p class="text-xs text-white/75">Siap membantu pertanyaan Anda</p>
           </div>
           <button type="button" class="rounded-full p-2 transition hover:bg-white/15" aria-label="Tutup chatbot" @click="panelOpen = false">
@@ -160,14 +160,13 @@ watch(panelOpen, (open) => {
 
     <button
       type="button"
-      class="flex h-14 items-center gap-2 rounded-full bg-primary-600 px-5 text-white shadow-xl shadow-primary-700/25 transition hover:-translate-y-0.5 hover:bg-primary-700"
+      class="flex size-1/12 items-center justify-center overflow-hidden text-white transition hover:-translate-y-0.5"
       :aria-expanded="panelOpen"
       :aria-label="panelOpen ? 'Tutup chatbot' : 'Buka chatbot'"
       @click="panelOpen = !panelOpen"
     >
       <X v-if="panelOpen" class="size-5" />
-      <img v-else :src="sahabatMu" alt="" class="size-9 rounded-full object-cover" />
-      <span class="text-sm font-semibold">{{ panelOpen ? 'Tutup' : 'Tanya SahabatMu' }}</span>
+      <img v-else :src="aisa" alt="" class="size-full object-cover" />
     </button>
   </div>
 </template>

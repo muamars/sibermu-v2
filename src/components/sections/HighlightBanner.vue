@@ -1,36 +1,34 @@
 <script setup lang="ts">
-import darimanaBackground from '@/assets/Darimana.webp'
-
-const highlights = ['Belajar Digital', 'Komunitas Mahasiswa', 'Prestasi', 'AIK']
+import student from '@/assets/student.png'
 </script>
 
 <template>
-  <section class="px-4 py-3 md:py-20 sm:px-6 lg:px-10">
-    <div
-      class="relative mx-auto max-w-[1440px] overflow-hidden rounded-3xl bg-primary-600 bg-contain bg-right bg-no-repeat px-6 py-10 sm:px-10 sm:py-12"
-      :style="{ backgroundImage: `url(${darimanaBackground})` }"
-    >
-      <div class="relative grid gap-8 lg:grid-cols-12 lg:items-center">
-        <div class="lg:col-span-5">
-          <h2 class="text-balance text-[28px] leading-[1.1] font-extrabold text-white sm:text-[34px]">
-            Kuliah boleh dari mana saja. Perjalananmu tetap penuh cerita.
-          </h2>
-        </div>
-        <div class="flex flex-col gap-5 lg:col-span-7">
-          <p class="max-w-xl text-base leading-relaxed text-white/80 sm:text-lg">
-            Temukan ruang untuk belajar, berorganisasi, berprestasi,
-            dan bertumbuh bersama komunitas SiberMu.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span
-              v-for="item in highlights"
-              :key="item"
-              class="rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm"
-            >
-              {{ item }}
-            </span>
-          </div>
-        </div>
+  <section class="px-4 py-10 sm:px-6 sm:py-14 lg:px-10 lg:py-20">
+    <div class="mx-auto grid max-w-[1440px] items-center gap-8 md:grid-cols-[1.1fr_0.9fr] md:gap-10 lg:gap-14">
+      <div class="relative h-[250px] overflow-hidden rounded-[28px_28px_0_28px] sm:h-[300px] lg:h-[340px]">
+        <img
+          :src="student"
+          alt="Mahasiswa SiberMu belajar menggunakan laptop"
+          class="absolute inset-0 size-full object-cover object-top"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="flex flex-col gap-4 items-start text-left">
+        <p class="flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] text-primary-600 uppercase">
+          <span class="h-px w-3 bg-primary-500" />
+          Sebuah Perjalanan
+        </p>
+
+        <h2 class="max-w-[620px] text-balance text-[32px] leading-[1.08] font-extrabold tracking-tight text-foreground sm:text-[40px] lg:text-[48px]">
+          Kuliah boleh dari mana saja,
+          <span class="block text-[#078db6]">Perjalananmu tetap penuh cerita.</span>
+        </h2>
+
+        <p class="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+          Temukan ruang untuk belajar, berorganisasi, berprestasi,
+          dan bertumbuh bersama komunitas SiberMu.
+        </p>
       </div>
     </div>
   </section>

@@ -9,7 +9,7 @@ withDefaults(
 )
 
 const toneClasses: Record<string, string> = {
-  primary: 'border-primary-200 bg-primary-50 text-primary-700',
+  primary: 'text-primary-600',
   cyan: 'border-cyan-200 bg-cyan-50 text-cyan-600',
   aik: 'border-aik-100 bg-aik-50 text-aik-600',
   light: 'border-white/30 bg-white/10 text-white',
@@ -19,9 +19,14 @@ const toneClasses: Record<string, string> = {
 
 <template>
   <span
-    class="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-[11px] font-semibold tracking-[0.14em] uppercase"
-    :class="toneClasses[tone]"
+    :class="[
+      toneClasses[tone],
+      tone === 'primary'
+        ? 'flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase'
+        : 'inline-flex items-center gap-2 rounded-full border px-3 py-1 text-[11px] font-semibold tracking-[0.14em] uppercase',
+    ]"
   >
+    <span v-if="tone === 'primary'" class="h-px w-3 bg-primary-500" aria-hidden="true" />
     <slot />
   </span>
 </template>
