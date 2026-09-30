@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { ArrowDownRight, Award, Medal, Trophy } from '@lucide/vue'
+import { ArrowDownRight } from '@lucide/vue'
 import SectionHeading from '@/components/common/SectionHeading.vue'
 import { achievements } from '@/data/achievements'
 
