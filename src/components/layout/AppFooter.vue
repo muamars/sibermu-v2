@@ -48,7 +48,7 @@ const mediaCredits = [
   },
   {
     title: 'Website SiberMu dan aset lokal',
-    detail: 'kampus-virtual.webp bersumber dari website SiberMu. Asal distribusi/lisensi aisa.webp, logo-only.png, sibermu-logo.png, sibermu-white.png, dan enam logo src/assets/prodi/ belum tercatat; konfirmasikan kepada pemilik.',
+    detail: 'kampus-virtual.webp, logo-only.png, sibermu-logo.png, sibermu-white.png, dan enam logo program studi di src/assets/prodi/ bersumber dari website SiberMu. aisa.webp dibuat oleh tim.',
   },
   {
     title: 'Ikon dan font',

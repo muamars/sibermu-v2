@@ -77,6 +77,9 @@ const highlights = [
           loading="lazy"
         />
         <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/10 to-transparent" />
+        <figcaption class="absolute bottom-3 left-3 rounded-full bg-navy-950/65 px-3 py-1.5 text-[10px] font-medium text-white backdrop-blur-sm">
+          Sumber: AI Generated Content
+        </figcaption>
       </figure>
     </div>
 

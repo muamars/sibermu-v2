@@ -221,7 +221,7 @@ p.para(44, 344, 'Informasi institusi merujuk pada situs resmi sibermu.ac.id dan 
 media = [
     ('Konten AI', 'Hero scene3-scene6, bem.webp (Kemahasiswaan), kajian.webp (AIK), dan mulai.webp (Final CTA).'),
     ('Instagram SiberMu', 'student.png serta winner/winner1.webp dan winner/winner2.webp (Prestasi). Posting spesifik belum dicatat.'),
-    ('Website SiberMu + aset lokal', 'kampus-virtual.webp bersumber dari website SiberMu. Asal/lisensi aisa.webp, logo-only.png, sibermu-logo.png, sibermu-white.png, dan enam logo src/assets/prodi/ belum tercatat.'),
+    ('Website SiberMu + karya tim', 'kampus-virtual.webp, logo-only.png, sibermu-logo.png, sibermu-white.png, dan enam logo program studi src/assets/prodi/ bersumber dari website SiberMu. aisa.webp dibuat oleh tim.'),
     ('Ikon, font, UI', 'Lucide Icons (@lucide/vue); Geist, Inter Tight, TASA Explorer (Google Fonts); Reka UI; Tailwind CSS.'),
     ('Referensi konten/desain', 'Informasi sibermu.ac.id, panduan lomba, dan screenshot referensi yang dibagikan selama proses desain.'),
 ]
