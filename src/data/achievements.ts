@@ -37,6 +37,7 @@ export const achievements: Achievement[] = [
       'Tim mahasiswa meraih Juara 2 pada Medical Scientific Competition and Award of UIN Malang (MIDBRAIN) melalui gagasan ilmiah mereka.',
     category: 'Akademik · Nasional',
     recipients: ['NADA PRATIWI'],
+    year: '2023',
   },
   {
     title: 'Wisuda Perdana dengan Predikat Cumlaude',
@@ -50,6 +51,7 @@ export const achievements: Achievement[] = [
       'Melewati seleksi ketat mulai dari pembuatan video profil hingga wawancara, mahasiswa SiberMu meraih posisi ke-2 tingkat nasional.',
     category: 'Non-Akademik · Literasi',
     recipients: ['Nurseni Yulianti'],
+    year: '2024',
   },
   {
     title: 'Pelopor Gerakan Digital Imersif',
