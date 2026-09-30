@@ -23,7 +23,7 @@ import { Button } from '@/components/ui/button'
         </span>
       </div>
 
-      <div class="relative flex min-h-[560px] flex-col justify-between px-6 py-10 sm:min-h-[680px] sm:px-10 sm:py-12 lg:min-h-[720px]">
+      <div class="relative flex min-h-[560px] flex-col justify-between px-5 pt-8 pb-14 sm:min-h-[680px] sm:px-10 sm:py-12 lg:min-h-[720px]">
         <div class="flex items-center justify-between">
           <span class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[11px] font-semibold tracking-[0.14em] text-white uppercase backdrop-blur-sm">
             Kampus Digital · Islam Berkemajuan
@@ -31,8 +31,8 @@ import { Button } from '@/components/ui/button'
         </div>
 
         <div class="flex flex-col gap-6">
-          <h1 class="max-w-2xl text-balance text-[42px] leading-[1.02] font-extrabold tracking-tight text-white sm:text-[64px] lg:text-[76px]">
-              Tumbuh bersama <span class="text-cyan-300">Sibermu.</span>
+          <h1 class="max-w-2xl text-balance text-[clamp(36px,10vw,42px)] leading-[1.02] font-extrabold tracking-tight text-white sm:text-[64px] lg:text-[76px]">
+              Tumbuh bersama <span class="text-white">Sibermu.</span>
           </h1>
 
           <p class="max-w-md text-base leading-relaxed text-white/80 sm:text-lg">
@@ -41,11 +41,18 @@ import { Button } from '@/components/ui/button'
           </p>
 
           <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Button as-child class="h-12 gap-2 rounded-full bg-white px-6 text-sm font-semibold text-navy-950 hover:bg-white/90">
+            <Button as-child class="h-12 gap-2 rounded-full bg-white px-6 text-sm font-semibold text-navy-950 [a]:hover:bg-[#078db6] [a]:hover:text-white">
               <a href="#kemahasiswaan">
-                Jelajahi Kehidupan Mahasiswa
+                Jelajahi Kegiatan Mahasiswa
                 <ArrowRight class="size-4" />
               </a>
+            </Button>
+            <Button
+              as-child
+              variant="outline"
+              class="h-12 rounded-full border-white/50 bg-white/5 px-6 text-sm font-semibold text-white hover:border-white hover:bg-[#078db6] hover:text-white [a]:hover:bg-[#078db6] [a]:hover:text-white"
+            >
+              <a href="#prodi">Lihat Program Studi</a>
             </Button>
             <Button
               as-child
@@ -64,6 +71,10 @@ import { Button } from '@/components/ui/button'
           </div>
         </div>
       </div>
+
+      <p class="absolute bottom-4 left-6 z-10 text-[9px] font-medium tracking-wide text-white/70 sm:left-10">
+        Sumber: AI Generated Content
+      </p>
     </div>
   </section>
 </template>

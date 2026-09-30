@@ -1,17 +1,14 @@
 <script setup lang="ts">
 import { ArrowRight } from '@lucide/vue'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
-import scene1 from '@/assets/scene1.webp'
-import scene2 from '@/assets/scene2.webp'
 import scene3 from '@/assets/scene3.webp'
 import scene4 from '@/assets/scene4.webp'
 import scene5 from '@/assets/scene5.webp'
 import scene6 from '@/assets/scene6.webp'
-import scene7 from '@/assets/scene7.webp'
 import { Button } from '@/components/ui/button'
 import { filmScenes } from '@/data/filmScenes'
 
-const images = [scene1, scene2, scene3, scene4, scene5, scene6, scene7]
+const images = [scene3, scene4, scene5, scene6]
 const scenes = filmScenes.slice(0, images.length).map((copy, index) => ({
   ...copy,
   image: images[index],
@@ -122,9 +119,9 @@ onUnmounted(() => {
         }"
       />
 
-      <div class="absolute inset-0 z-10 flex items-center px-6 sm:px-10 lg:px-16 xl:px-24">
+      <div class="absolute inset-0 z-10 flex items-center px-4 pt-12 pb-24 sm:px-10 sm:py-12 lg:px-16 xl:px-24">
         <Transition mode="out-in" name="hero-copy">
-          <div :key="activeScene" class="w-full">
+          <div :key="activeScene" class="w-full min-w-0">
             <div
               class="max-w-[620px]"
               :class="{
@@ -139,15 +136,15 @@ onUnmounted(() => {
 
               <h1
                 v-if="currentScene.variant === 'hero'"
-                class="mt-4 text-balance text-[42px] leading-[0.98] font-bold tracking-[-0.04em] text-white sm:text-[58px] lg:text-[72px]"
+                class="mt-4 text-balance text-[clamp(34px,10vw,42px)] leading-[0.98] font-bold tracking-[-0.04em] text-white sm:text-[58px] lg:text-[72px]"
               >
-                {{ currentScene.titleAccent ? currentScene.title.replace(currentScene.titleAccent, '') : currentScene.title }}<span v-if="currentScene.titleAccent" class="text-cyan-300">{{ currentScene.titleAccent }}</span>
+                {{ currentScene.titleAccent ? currentScene.title.replace(currentScene.titleAccent, '') : currentScene.title }}<span v-if="currentScene.titleAccent" class="text-white">{{ currentScene.titleAccent }}</span>
               </h1>
               <h2
                 v-else
-                class="mt-4 text-balance text-[34px] leading-[1.03] font-bold tracking-[-0.035em] text-white sm:text-[44px] lg:text-[54px]"
+                class="mt-4 text-balance text-[clamp(28px,8vw,34px)] leading-[1.03] font-bold tracking-[-0.035em] text-white sm:text-[44px] lg:text-[54px]"
               >
-                {{ currentScene.titleAccent ? currentScene.title.replace(currentScene.titleAccent, '') : currentScene.title }}<span v-if="currentScene.titleAccent" class="text-cyan-300">{{ currentScene.titleAccent }}</span>
+                {{ currentScene.titleAccent ? currentScene.title.replace(currentScene.titleAccent, '') : currentScene.title }}<span v-if="currentScene.titleAccent" class="text-white">{{ currentScene.titleAccent }}</span>
               </h2>
 
               <p
@@ -165,11 +162,14 @@ onUnmounted(() => {
                 class="mt-7 flex flex-col gap-3 sm:flex-row"
                 :class="currentScene.position === 'center' ? 'sm:justify-center' : ''"
               >
-                <Button as-child class="h-12 gap-2 rounded-full bg-white px-6 text-sm font-semibold text-[#092845] hover:bg-white/90">
+                <Button as-child class="h-12 gap-2 rounded-full bg-white px-6 text-sm font-semibold text-[#092845] [a]:hover:bg-[#078db6] [a]:hover:text-white">
                   <a href="#kemahasiswaan">
-                    Jelajahi Kehidupan Mahasiswa
+                    Jelajahi Kegiatan Mahasiswa
                     <ArrowRight class="size-4" />
                   </a>
+                </Button>
+                <Button as-child variant="outline" class="h-12 rounded-full border-white/50 bg-white/5 px-6 text-sm font-semibold text-white hover:border-white hover:bg-[#078db6] hover:text-white [a]:hover:bg-[#078db6] [a]:hover:text-white">
+                  <a href="#prodi">Lihat Program Studi</a>
                 </Button>
               </div>
             </div>
@@ -177,12 +177,12 @@ onUnmounted(() => {
         </Transition>
       </div>
 
-      <div class="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2">
+      <div class="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 items-center gap-1 sm:bottom-8 sm:gap-2">
         <button
           v-for="(scene, index) in scenes"
           :key="scene.title"
           type="button"
-          class="group relative flex h-5 items-center justify-center"
+          class="group relative flex h-11 min-w-10 items-center justify-center sm:h-5 sm:min-w-0"
           :aria-label="`Scene ${index + 1}: ${scene.title}`"
           :aria-current="activeScene === index ? 'true' : undefined"
           @click="goToScene(index)"
@@ -198,6 +198,10 @@ onUnmounted(() => {
         <span class="text-sm font-semibold">{{ String(activeScene + 1).padStart(2, '0') }}</span>
         <span class="text-[10px] text-white/60">/ {{ String(sceneCount).padStart(2, '0') }}</span>
       </div>
+
+      <p class="pointer-events-none absolute bottom-2 left-4 z-20 text-[8px] font-medium tracking-wide text-white/75 sm:bottom-8 sm:left-10 sm:text-[9px] lg:left-16 xl:left-24">
+        Sumber: AI Generated Content
+      </p>
     </div>
   </section>
 </template>

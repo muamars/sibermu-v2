@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { BadgeCheck, BookOpenCheck, GraduationCap, UsersRound } from '@lucide/vue'
-import studentCommunity from '@/assets/scene3.webp'
+import studentCommunity from '@/assets/bem.webp'
 
 const highlights = [
   {
@@ -8,24 +8,28 @@ const highlights = [
     title: 'Organisasi Mahasiswa',
     description: 'Temukan ruang untuk berkolaborasi, mengambil peran, dan membangun pengalaman bersama.',
     icon: UsersRound,
+    href: '#km-organisasi',
   },
   {
     number: '02',
     title: 'Unit Kegiatan Mahasiswa',
     description: 'Kembangkan minat dan bakat melalui komunitas dan aktivitas yang sesuai dengan passion.',
     icon: BookOpenCheck,
+    href: '#km-ukm',
   },
   {
     number: '03',
     title: 'Prestasi Mahasiswa',
     description: 'Apresiasi berbagai pencapaian mahasiswa di bidang akademik maupun non-akademik.',
     icon: GraduationCap,
+    href: '#prestasi',
   },
   {
     number: '04',
     title: 'Layanan Mahasiswa',
     description: 'Berbagai layanan yang mendukung perjalanan akademik dan kehidupan mahasiswa.',
     icon: BadgeCheck,
+    href: '#layanan',
   },
 ]
 </script>
@@ -43,10 +47,11 @@ const highlights = [
         </h2>
 
         <div class="mt-7 grid gap-2 sm:grid-cols-2">
-          <article
+          <a
             v-for="item in highlights"
             :key="item.number"
-            class="group relative overflow-hidden rounded-2xl border border-primary-100/80 bg-white/85 p-4 transition duration-300 hover:-translate-y-1 hover:border-primary-300 hover:shadow-[0_12px_30px_rgba(12,35,52,0.09)]"
+            :href="item.href"
+            class="group relative overflow-hidden rounded-2xl border border-primary-100/80 bg-white/85 p-4 transition duration-300 hover:-translate-y-1 hover:border-primary-300 hover:shadow-[0_12px_30px_rgba(12,35,52,0.09)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
           >
             <div class="flex items-start gap-3">
               <span class="flex size-9 shrink-0 items-center justify-center rounded-xl bg-primary-50 text-primary-700 transition-colors group-hover:bg-primary-600 group-hover:text-white">
@@ -60,7 +65,7 @@ const highlights = [
                 <p class="mt-1.5 text-xs leading-relaxed text-slate-600">{{ item.description }}</p>
               </div>
             </div>
-          </article>
+          </a>
         </div>
       </div>
 

@@ -7,12 +7,14 @@ import ScrollProgressBar from '@/components/layout/ScrollProgressBar.vue'
 import AboutSection from '@/components/sections/AboutSection.vue'
 import AchievementSection from '@/components/sections/AchievementSection.vue'
 import AikSection from '@/components/sections/AikSection.vue'
+import AikValuesSection from '@/components/sections/AikValuesSection.vue'
 import FaqSection from '@/components/sections/FaqSection.vue'
 import HeroSectionBaru from '@/components/sections/HeroSectionBaru.vue'
 import FinalCtaSection from '@/components/sections/FinalCtaSection.vue'
 import HeroSection from '@/components/sections/HeroSection.vue'
 import HighlightBanner from '@/components/sections/HighlightBanner.vue'
 import KemahasiswaanSection from '@/components/sections/KemahasiswaanSection.vue'
+import KemahasiswaanDetailSection from '@/components/sections/KemahasiswaanDetailSection.vue'
 import KampusVirtualSection from '@/components/sections/KampusVirtualSection.vue'
 import ProdiSection from '@/components/sections/ProdiSection.vue'
 import ServicesSection from '@/components/sections/ServicesSection.vue'
@@ -30,10 +32,12 @@ const prefersReducedMotion = usePrefersReducedMotion()
     <HeroSection v-else />
 
     <HighlightBanner />
-    <AboutSection />
+    <!-- <AboutSection /> -->
     <ProdiSection />
     <KemahasiswaanSection />
+    <KemahasiswaanDetailSection />
     <AikSection />
+    <AikValuesSection />
     <!-- <StudentPathSection /> -->
     <AchievementSection />
     <!-- <BridgeSection /> -->

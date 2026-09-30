@@ -40,7 +40,7 @@ const yearGroups = computed(() => {
         <section v-for="[year, items] in yearGroups" :key="year" class="grid gap-5 md:grid-cols-[150px_minmax(0,1fr)] md:gap-10">
           <div class="relative flex items-start gap-4 md:justify-end">
             <div class="md:sticky md:top-24 md:flex md:flex-col md:items-end">
-              <span class="font-mono text-3xl font-bold tracking-tight text-navy-950 sm:text-4xl">{{ year }}</span>
+              <span class="text-3xl font-bold tracking-tight text-navy-950 sm:text-4xl text-right">{{ year }}</span>
               <span class="mt-1 text-xs font-semibold tracking-[0.16em] text-primary-700 uppercase">{{ items.length }} prestasi</span>
             </div>
             <div class="absolute top-1 -right-[21px] hidden h-full w-px bg-gradient-to-b from-cyan-400 via-primary-200 to-transparent md:block" aria-hidden="true" />
@@ -50,14 +50,14 @@ const yearGroups = computed(() => {
             <article
               v-for="(item, index) in items"
               :key="item.title"
-              class="group relative isolate min-h-[220px] overflow-hidden rounded-[26px] border border-navy-950/[0.07] bg-white p-6 shadow-[0_8px_30px_rgba(12,35,52,0.04)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(12,35,52,0.11)] sm:p-8"
+              class="group relative isolate min-h-[220px] overflow-hidden rounded-[26px] border border-navy-950/[0.07] bg-white p-5 shadow-[0_8px_30px_rgba(12,35,52,0.04)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(12,35,52,0.11)] sm:p-8"
             >
-              <div v-if="item.photo" class="pointer-events-none absolute inset-y-0 right-0 z-0 w-[45%] sm:w-[38%]">
-                <img :src="item.photo" :alt="`Foto ${item.title}`" class="h-full w-full object-contain object-right-bottom transition-transform duration-500 group-hover:scale-[1.04]" />
+              <div v-if="item.photo" class="pointer-events-none absolute inset-y-0 right-0 z-0 w-[32%] sm:w-[38%]">
+                <img :src="item.photo" :alt="`Foto ${item.title}`" class="h-full w-full object-contain object-right-bottom transition-transform duration-500 group-hover:scale-[1.04]" loading="lazy" />
                 <div class="absolute inset-0 bg-gradient-to-r from-white via-white/70 to-transparent" aria-hidden="true" />
               </div>
 
-              <div class="relative z-10 flex h-full max-w-[720px] flex-col">
+              <div class="relative z-10 flex h-full max-w-[72%] flex-col sm:max-w-[720px]">
                 <div class="flex flex-wrap items-center gap-2">
                   <span class="inline-flex items-center gap-1.5 rounded-full bg-cyan-50 px-3 py-1 text-[10px] font-bold tracking-[0.12em] text-primary-800 uppercase">
                     <!-- <Medal v-if="item.title.toLowerCase().includes('medal') || item.title.toLowerCase().includes('emas')" class="size-3.5" />
@@ -66,10 +66,10 @@ const yearGroups = computed(() => {
                   </span>
                 </div>
 
-                <h3 class="mt-5 max-w-[560px] text-xl leading-tight font-bold tracking-tight text-navy-950 sm:text-2xl">{{ item.title }}</h3>
-                <p class="mt-2 max-w-[560px] text-sm leading-relaxed text-slate-600">{{ item.description }}</p>
+                <h3 class="mt-5 max-w-[560px] text-lg leading-tight font-bold tracking-tight text-navy-950 [overflow-wrap:anywhere] sm:text-2xl">{{ item.title }}</h3>
+                <p class="mt-2 max-w-[560px] text-xs leading-relaxed text-slate-600 sm:text-sm">{{ item.description }}</p>
 
-                <div v-if="item.recipients?.length" class="mt-auto flex flex-wrap gap-x-5 gap-y-1 pt-5 text-sm font-semibold text-primary-800">
+                <div v-if="item.recipients?.length" class="mt-auto flex flex-wrap gap-x-3 gap-y-1 pt-5 text-xs font-semibold text-primary-800 sm:gap-x-5 sm:text-sm">
                   <span v-for="recipient in item.recipients" :key="recipient" class="flex items-center gap-2">
                     <span class="size-1.5 rounded-full bg-cyan-500" aria-hidden="true" />{{ recipient }}
                   </span>

@@ -102,14 +102,24 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 110px;
+    overflow-x: clip;
+    -webkit-tap-highlight-color: transparent;
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    min-width: 320px;
+    overflow-x: clip;
     font-feature-settings: 'ss01' 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+  }
+
+  @media (max-width: 639px) {
+    html {
+      scroll-padding-top: 88px;
+    }
   }
 }
 

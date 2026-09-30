@@ -17,6 +17,9 @@ const icons = { BookOpen, Radio, Sparkles, HandHeart }
           class="absolute inset-0 size-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
           loading="lazy"
         />
+        <figcaption class="absolute bottom-3 left-3 rounded-full bg-navy-950/65 px-3 py-1.5 text-[10px] font-medium text-white backdrop-blur-sm">
+          Sumber: AI Generated Content
+        </figcaption>
       </figure>
 
       <div>

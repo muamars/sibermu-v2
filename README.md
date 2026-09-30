@@ -18,7 +18,9 @@ Konsep visualnya menggabungkan suasana universitas digital yang modern dengan pe
 
 - **Hero dan pengenalan SiberMu** untuk memperkenalkan pengalaman belajar digital.
 - **Kemahasiswaan** yang mencakup organisasi, UKM, prestasi, dan layanan mahasiswa.
+- **Detail Kemahasiswaan** yang merangkum komunitas, kegiatan ilmiah, minat bakat, serta program internasional mahasiswa.
 - **AIK** yang menampilkan kegiatan keagamaan, kajian, syiar, serta nilai Kemuhammadiyahan.
+- **Delapan nilai utama Kemuhammadiyahan** sebagai dasar pembentukan karakter dan kontribusi sosial.
 - **Hall of Fame** untuk menampilkan prestasi dan penerimanya dalam urutan tahun.
 - **Layanan mahasiswa**, **cerita mahasiswa**, FAQ, dan ajakan mengenal SiberMu lebih lanjut.
 - **Chatbot Aisa** yang mengirim pesan langsung ke webhook informasi SiberMu.
@@ -38,7 +40,8 @@ Ketentuan lomba meminta sumber gambar, ikon, huruf, dan media lain dicantumkan. 
 | Media | Lokasi/penggunaan | Sumber yang tercatat |
 |---|---|---|
 | Logo SiberMu dan logo program studi | `src/assets/sibermu-logo.png`, `src/assets/sibermu-white.png`, `src/assets/prodi/` | Berkas identitas yang tersedia di proyek. URL asal dan keterangan lisensi belum tercatat; konfirmasikan kepada pemilik identitas SiberMu. |
-| Foto dan visual mahasiswa/kampus | `src/assets/scene*.webp`, `src/assets/student.png`, `src/assets/kajian.webp`, `src/assets/mulai.webp`, `src/assets/kampus-virtual.webp`, `src/assets/winner/` | Aset lokal yang digunakan pada halaman. Informasi fotografer, URL publikasi, dan lisensi sumber aslinya belum tercatat di repositori; lengkapi kredit setelah diverifikasi. |
+| Foto mahasiswa belajar | `src/assets/student.png` | Instagram [SiberMu](https://www.instagram.com/sibermu/). Tautan posting spesifik belum dicatat. |
+| Foto dan visual mahasiswa/kampus lainnya | `src/assets/scene*.webp`, `src/assets/kajian.webp`, `src/assets/mulai.webp`, `src/assets/kampus-virtual.webp`, `src/assets/winner/` | Aset lokal yang digunakan pada halaman. Informasi fotografer, URL publikasi, dan lisensi sumber aslinya belum tercatat di repositori; lengkapi kredit setelah diverifikasi. |
 | Ikon antarmuka | Komponen Vue | Lucide — [lucide.dev](https://lucide.dev/), paket `@lucide/vue`. |
 | Font | `src/style.css` | Google Fonts: [Geist](https://fonts.google.com/specimen/Geist), [Inter Tight](https://fonts.google.com/specimen/Inter+Tight), dan [TASA Explorer](https://fonts.google.com/specimen/TASA+Explorer). |
 

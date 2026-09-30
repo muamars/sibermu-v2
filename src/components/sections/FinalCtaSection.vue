@@ -20,7 +20,7 @@ import sibermuLogo from '@/assets/sibermu-white.png'
       <div class="relative grid gap-8 lg:grid-cols-[1fr_0.65fr] lg:items-center">
         <div class="relative z-10 flex flex-col gap-5 lg:max-w-xl">
           <h2 class="text-balance text-[34px] leading-[1.05] font-extrabold text-white sm:text-[44px]">
-            Perjalananmu dimulai <span class="text-cyan-300">dari sini.</span>
+            Perjalananmu dimulai <span class="text-[#078db6]">dari sini.</span>
           </h2>
           <p class="text-base leading-relaxed text-white/80 sm:text-lg">
             Belajar. Bertumbuh. Berkarya. Bersama SiberMu.
@@ -53,7 +53,7 @@ import sibermuLogo from '@/assets/sibermu-white.png'
         <img
           :src="studentImage"
           alt="Mahasiswa SiberMu siap memulai perjalanan kuliah"
-          class="block h-full w-auto max-w-none object-contain object-bottom"
+          class="block h-full w-auto max-w-full object-contain object-bottom lg:max-w-none"
           loading="lazy"
         />
       </div>

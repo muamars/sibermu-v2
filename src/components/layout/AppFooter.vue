@@ -38,10 +38,26 @@ const socials = [
 ]
 
 const mediaCredits = [
-  'Foto & dokumentasi: Universitas Siber Muhammadiyah',
-  'Ikon: Lucide Icons',
-  'Font: Plus Jakarta Sans — Google Fonts',
-  'Komponen UI: shadcn-vue & Reka UI',
+  {
+    title: 'Konten AI',
+    detail: 'Hero scene3–scene6, bem.webp (Kemahasiswaan), kajian.webp (AIK), dan mulai.webp (Final CTA).',
+  },
+  {
+    title: 'Instagram SiberMu',
+    detail: 'student.png serta winner1.webp dan winner2.webp pada section Prestasi. Tautan posting spesifik belum dicatat.',
+  },
+  {
+    title: 'Website SiberMu dan aset lokal',
+    detail: 'kampus-virtual.webp bersumber dari website SiberMu. Asal distribusi/lisensi aisa.webp, logo-only.png, sibermu-logo.png, sibermu-white.png, dan enam logo src/assets/prodi/ belum tercatat; konfirmasikan kepada pemilik.',
+  },
+  {
+    title: 'Ikon dan font',
+    detail: 'Ikon Lucide (@lucide/vue, lucide.dev); font Geist, Inter Tight, dan TASA Explorer dari Google Fonts.',
+  },
+  {
+    title: 'UI',
+    detail: 'Primitif komponen interaktif dari Reka UI; gaya dan utility CSS menggunakan Tailwind CSS.',
+  },
 ]
 </script>
 
@@ -98,9 +114,12 @@ const mediaCredits = [
 
       <div class="mt-12 flex flex-col gap-2 border-t border-white/10 pt-6">
         <p class="text-xs font-semibold tracking-wide text-white/50 uppercase">Kredit Media</p>
-        <p class="text-xs leading-relaxed text-white/40">
-          {{ mediaCredits.join(' · ') }}
-        </p>
+        <ul class="grid gap-x-8 gap-y-3 text-[11px] leading-relaxed text-white/45 sm:grid-cols-2">
+          <li v-for="credit in mediaCredits" :key="credit.title">
+            <strong class="font-semibold text-white/65">{{ credit.title }}:</strong>
+            {{ credit.detail }}
+          </li>
+        </ul>
       </div>
 
       <div class="mt-6 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">

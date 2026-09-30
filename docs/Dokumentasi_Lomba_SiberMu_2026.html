@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Ruang Bertumbuh, Berkemajuan — Dokumentasi SiberMu</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root { font-family: Geist, Inter, ui-sans-serif, system-ui, sans-serif; color: #102d40; }
+      html { background: #e9eef1; }
+      body { margin: 0; }
+      .sheet { width: 210mm; min-height: 297mm; margin: 24px auto; padding: 15mm 16mm 14mm; box-sizing: border-box; background: white; position: relative; overflow: hidden; box-shadow: 0 12px 40px #102d401c; }
+      .cover { background: #09283b; color: white; }
+      .page-footer { position: absolute; bottom: 8mm; left: 16mm; right: 16mm; }
+      @media screen and (max-width: 767px) {
+        html { background: #e9eef1; }
+        .sheet { width: auto; min-height: 0; margin: 12px; padding: 26px 20px 28px; border-radius: 22px; }
+        .cover { min-height: calc(100svh - 112px); }
+        .page-footer { position: static; margin-top: 30px; }
+        .sheet .grid { grid-template-columns: minmax(0, 1fr) !important; }
+        .sheet h1 { font-size: clamp(38px, 12vw, 52px); }
+        .sheet h2 { font-size: clamp(26px, 8vw, 34px); }
+        .sheet header { padding: 22px; }
+        .sheet article { min-width: 0; }
+        .sheet p, .sheet span, .sheet strong { overflow-wrap: anywhere; }
+      }
+      @media print {
+        @page { size: A4; margin: 0; }
+        html, body { background: white; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+        .sheet { width: 210mm; height: 297mm; min-height: 297mm; margin: 0; box-shadow: none; break-after: page; page-break-after: always; }
+        .sheet { border-radius: 0; }
+        .sheet:last-of-type { break-after: auto; page-break-after: auto; }
+        .print-hidden { display: none !important; }
+      }
+    </style>
+  </head>
+  <body class="text-[#102d40] antialiased">
+    <div class="print-hidden sticky top-0 z-10 flex items-center justify-between gap-4 bg-[#09283b] px-6 py-3 text-sm text-white shadow-lg">
+      <span>Dokumentasi lomba · 4 halaman · Siap diekspor ke PDF</span>
+      <button onclick="window.print()" class="rounded-full bg-[#078db6] px-5 py-2 font-semibold hover:bg-[#06799c]">Cetak / Simpan sebagai PDF</button>
+    </div>
+
+    <main>
+      <section class="sheet cover flex flex-col justify-between">
+        <div class="absolute -right-28 top-24 h-80 w-80 rounded-full border border-white/10"></div>
+        <div class="absolute -right-12 top-40 h-52 w-52 rounded-full border border-white/10"></div>
+        <header class="relative flex items-center justify-between border-b border-white/15 pb-5">
+          <div class="flex items-center gap-3"><span class="h-9 w-1 rounded-full bg-[#21b8df]"></span><div><div class="text-sm font-extrabold tracking-[.2em]">SIBERMU</div><div class="mt-1 text-[9px] font-semibold tracking-[.18em] text-sky-100/70">KEMAHASISWAAN + AIK</div></div></div>
+          <span class="text-[10px] font-semibold tracking-[.16em] text-sky-100/70">DOKUMENTASI KARYA · 2026</span>
+        </header>
+        <div class="relative -mt-8">
+          <p class="mb-5 text-[10px] font-bold uppercase tracking-[.24em] text-[#42c7e8]">Lomba Landing Page SiberMu 2026</p>
+          <h1 class="max-w-[150mm] text-[46px] font-semibold leading-[1.02] tracking-[-.055em]">Ruang Bertumbuh,<br /><span class="text-[#42c7e8]">Berkemajuan.</span></h1>
+          <p class="mt-6 max-w-[135mm] text-lg leading-8 text-slate-200">Landing page tentang kehidupan kemahasiswaan dan Al-Islam Kemuhammadiyahan Universitas Siber Muhammadiyah.</p>
+          <div class="mt-12 grid grid-cols-2 gap-5 border-t border-white/15 pt-7">
+            <div><p class="text-[9px] font-bold tracking-[.2em] text-sky-200">KARYA OLEH</p><p class="mt-3 text-base font-semibold">Muammar · Falih Ananta · Nur Arifin</p></div>
+            <div><p class="text-[9px] font-bold tracking-[.2em] text-sky-200">INSTANSI</p><p class="mt-3 text-sm leading-6 text-slate-200">Dinas Lingkungan Hidup<br />Provinsi DKI Jakarta</p></div>
+          </div>
+        </div>
+        <div class="relative rounded-3xl border border-white/15 bg-white/[.06] p-7">
+          <p class="text-[9px] font-bold tracking-[.2em] text-[#42c7e8]">GAGASAN UTAMA</p>
+          <p class="mt-4 max-w-[150mm] text-[19px] font-medium leading-8">Satu ruang digital yang menunjukkan bagaimana mahasiswa SiberMu dapat belajar, berorganisasi, berprestasi, dan bertumbuh dengan nilai Islam Berkemajuan.</p>
+          <p class="mt-4 max-w-[140mm] text-sm leading-6 text-slate-300">Dirancang sebagai pengalaman yang informatif, responsif, dan dekat dengan calon mahasiswa.</p>
+        </div>
+        <footer class="relative flex justify-between border-t border-white/15 pt-4 text-[9px] font-semibold tracking-[.12em] text-sky-100/65"><span>UNIVERSITAS SIBER MUHAMMADIYAH</span><span>01 / 04</span></footer>
+      </section>
+
+      <section class="sheet">
+        <header class="mb-8 rounded-3xl bg-[#09283b] px-8 py-7 text-white">
+          <div class="flex items-center justify-between"><span class="text-[9px] font-bold tracking-[.2em] text-sky-200">SIBERMU · DOKUMENTASI KARYA</span><span class="rounded-full bg-white/10 px-3 py-1 text-[10px]">02 / 04</span></div>
+          <h2 class="mt-6 text-3xl font-semibold tracking-[-.04em]">Konteks dan Gagasan</h2>
+        </header>
+        <p class="text-[13px] leading-6 text-slate-600">Lomba Pembuatan Landing Page SiberMu 2026 meminta satu halaman yang memuat Kemahasiswaan dan AIK secara terpadu. Karya ini menyatukan kedua tema dalam alur dari pengenalan kampus, pengalaman mahasiswa, kegiatan dan nilai, hingga ajakan untuk mengenal SiberMu.</p>
+        <div class="mt-7 grid grid-cols-2 gap-4">
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5"><p class="text-[9px] font-bold tracking-[.16em] text-[#078db6]">ARAH KOMUNIKASI</p><h3 class="mt-2 text-lg font-semibold">Tujuan Karya</h3><ul class="mt-4 space-y-3 text-[11px] leading-5 text-slate-600"><li>• Membantu calon mahasiswa memahami ruang belajar dan kegiatan di SiberMu.</li><li>• Menunjukkan hubungan pengalaman kemahasiswaan dengan nilai AIK.</li><li>• Mengajak pengunjung menelusuri informasi melalui satu halaman.</li></ul></article>
+          <article class="rounded-2xl border border-slate-200 bg-slate-50 p-5"><p class="text-[9px] font-bold tracking-[.16em] text-[#078db6]">UNTUK CALON MAHASISWA</p><h3 class="mt-2 text-lg font-semibold">Audiens dan Pesan</h3><p class="mt-4 text-[11px] leading-5 text-slate-600">Audiens utama adalah calon mahasiswa dan pengunjung yang ingin mengenal kegiatan, layanan, serta karakter pembelajaran SiberMu.</p><p class="mt-4 text-xs font-bold text-[#078db6]">Belajar. Bertumbuh. Memberi manfaat.</p></article>
+        </div>
+        <div class="mt-8"><p class="text-[9px] font-bold tracking-[.2em] text-[#078db6]">PRINSIP DESAIN</p><h3 class="mt-2 text-2xl font-semibold tracking-[-.035em]">Modern, jelas, berpusat pada mahasiswa.</h3></div>
+        <div class="mt-5 grid grid-cols-2 gap-4">
+          <article class="rounded-2xl bg-[#f1f6f8] p-5"><span class="text-xs font-bold text-[#078db6]">01</span><h4 class="mt-2 text-sm font-semibold">Satu alur terpadu</h4><p class="mt-2 text-[11px] leading-5 text-slate-600">Kemahasiswaan dan AIK hadir dalam narasi satu landing page.</p></article>
+          <article class="rounded-2xl bg-[#f1f6f8] p-5"><span class="text-xs font-bold text-[#078db6]">02</span><h4 class="mt-2 text-sm font-semibold">Mudah dipindai</h4><p class="mt-2 text-[11px] leading-5 text-slate-600">Judul, kategori, dan kartu membantu pengunjung menemukan informasi.</p></article>
+          <article class="rounded-2xl bg-[#f1f6f8] p-5"><span class="text-xs font-bold text-[#078db6]">03</span><h4 class="mt-2 text-sm font-semibold">Visual SiberMu</h4><p class="mt-2 text-[11px] leading-5 text-slate-600">Palet navy dan biru memberi identitas serta menjaga keterbacaan.</p></article>
+          <article class="rounded-2xl bg-[#f1f6f8] p-5"><span class="text-xs font-bold text-[#078db6]">04</span><h4 class="mt-2 text-sm font-semibold">Lintas perangkat</h4><p class="mt-2 text-[11px] leading-5 text-slate-600">Tata letak menyesuaikan layar ponsel dan desktop.</p></article>
+        </div>
+        <footer class="page-footer flex justify-between border-t border-slate-200 pt-3 text-[9px] font-semibold tracking-[.12em] text-slate-400"><span>TIM DINAS LINGKUNGAN HIDUP PROVINSI DKI JAKARTA</span><span>02</span></footer>
+      </section>
+
+      <section class="sheet">
+        <header class="mb-7 rounded-3xl bg-[#09283b] px-8 py-7 text-white"><div class="flex items-center justify-between"><span class="text-[9px] font-bold tracking-[.2em] text-sky-200">SIBERMU · DOKUMENTASI KARYA</span><span class="rounded-full bg-white/10 px-3 py-1 text-[10px]">03 / 04</span></div><h2 class="mt-6 text-3xl font-semibold tracking-[-.04em]">Isi dan Pengalaman Pengunjung</h2></header>
+        <p class="text-[12px] leading-5 text-slate-600">Alur halaman memperkenalkan SiberMu, kehidupan mahasiswa, ruang kegiatan, prestasi, AIK, layanan, cerita mahasiswa, FAQ, dan ajakan bertindak.</p>
+        <div class="mt-6 grid grid-cols-2 gap-5">
+          <article class="rounded-3xl border border-slate-200 p-5"><p class="text-[9px] font-bold tracking-[.16em] text-[#078db6]">RUANG UNTUK TUMBUH DAN BERKARYA</p><h3 class="mt-2 text-xl font-semibold">Kemahasiswaan</h3><div class="mt-5 space-y-4 text-[10.5px] leading-[1.55] text-slate-600"><div><h4 class="font-bold text-[#102d40]">Organisasi dan UKM</h4><p>IMM, Hizbul Wathan, Tapak Suci; English Club, Business Digital, Digital Creator.</p></div><div><h4 class="font-bold text-[#102d40]">Komunitas</h4><p>Health Science Research Club dan Discord Information System SiberMu.</p></div><div><h4 class="font-bold text-[#102d40]">Ilmiah dan kompetisi</h4><p>PIMNAS, PKM, KBMI, MAWAPRES, GEMASTIK, KDMI, SATRIA DATA, LIDM, KBMK, dan PUSPRESMA PTMA.</p></div><div><h4 class="font-bold text-[#102d40]">Minat bakat</h4><p>Musabaqah Tilawatil Quran Mahasiswa Nasional dan Pekan Seni Mahasiswa PTMA.</p></div><div><h4 class="font-bold text-[#102d40]">Internasional</h4><p>Global Youth Action, Youth Innovation Forum, Student Exchange, dan Student Mobility.</p></div><div><h4 class="font-bold text-[#102d40]">Prestasi dan layanan</h4><p>Hall of Fame mengelompokkan prestasi per tahun. Kartu sinopsis mengarah ke bagian prestasi, UKM, organisasi, dan layanan terkait.</p></div></div></article>
+          <article class="rounded-3xl border border-slate-200 p-5"><p class="text-[9px] font-bold tracking-[.16em] text-[#078db6]">NILAI DALAM KESEHARIAN</p><h3 class="mt-2 text-xl font-semibold">Al-Islam dan Kemuhammadiyahan</h3><div class="mt-5 space-y-4 text-[10.5px] leading-[1.55] text-slate-600"><div><h4 class="font-bold text-[#102d40]">Kegiatan</h4><p>Kegiatan keagamaan, kajian, syiar digital, dan penguatan nilai Kemuhammadiyahan.</p></div><div><h4 class="font-bold text-[#102d40]">Delapan nilai utama</h4><p>Al-Qiyam Al-Fadhilah; pemuliaan manusia; persaudaraan; welas asih; etos kerja tinggi; tauhid pro kemanusiaan; nilai ilmiah/keilmuan; dan nilai peradaban.</p></div><div><h4 class="font-bold text-[#102d40]">Penyajian</h4><p>Foto kegiatan, aksen warna biru, dan daftar kegiatan berbentuk kartu menjaga konsistensi dengan bagian Kemahasiswaan.</p></div></div><div class="mt-8 rounded-2xl bg-[#eff7fa] p-5"><p class="text-[9px] font-bold tracking-[.16em] text-[#078db6]">FITUR INTERAKTIF</p><p class="mt-3 text-[10.5px] leading-5 text-slate-600">Tab kategori Kemahasiswaan, tab Visi/Misi, carousel cerita mahasiswa, navigasi section, dan chatbot Aisa.</p></div></article>
+        </div>
+        <footer class="page-footer flex justify-between border-t border-slate-200 pt-3 text-[9px] font-semibold tracking-[.12em] text-slate-400"><span>TIM DINAS LINGKUNGAN HIDUP PROVINSI DKI JAKARTA</span><span>03</span></footer>
+      </section>
+
+      <section class="sheet">
+        <header class="mb-7 rounded-3xl bg-[#09283b] px-8 py-7 text-white"><div class="flex items-center justify-between"><span class="text-[9px] font-bold tracking-[.2em] text-sky-200">SIBERMU · DOKUMENTASI KARYA</span><span class="rounded-full bg-white/10 px-3 py-1 text-[10px]">04 / 04</span></div><h2 class="mt-6 text-3xl font-semibold tracking-[-.04em]">Teknologi dan Kredit Media</h2></header>
+        <p class="text-[9px] font-bold tracking-[.2em] text-[#078db6]">IMPLEMENTASI</p><h3 class="mt-2 text-xl font-semibold">Dibangun sebagai antarmuka web satu halaman.</h3>
+        <div class="mt-4 grid grid-cols-2 gap-3"><div class="rounded-xl bg-slate-50 p-4"><h4 class="text-xs font-bold">Vue 3 + TypeScript</h4><p class="mt-1 text-[10px] text-slate-600">Komponen section modular dan data konten terpisah.</p></div><div class="rounded-xl bg-slate-50 p-4"><h4 class="text-xs font-bold">Vite</h4><p class="mt-1 text-[10px] text-slate-600">Server pengembangan dan build production.</p></div><div class="rounded-xl bg-slate-50 p-4"><h4 class="text-xs font-bold">Tailwind CSS 4</h4><p class="mt-1 text-[10px] text-slate-600">Utility untuk layout responsif dan token visual.</p></div><div class="rounded-xl bg-slate-50 p-4"><h4 class="text-xs font-bold">Lucide Vue</h4><p class="mt-1 text-[10px] text-slate-600">Ikon antarmuka.</p></div></div>
+        <div class="mt-7"><p class="text-[9px] font-bold tracking-[.2em] text-[#078db6]">SUMBER INFORMASI DAN VISUAL</p><p class="mt-3 text-[10.5px] leading-5 text-slate-600">Informasi institusi merujuk situs resmi sibermu.ac.id dan snapshot materi proyek bertanggal 11 September 2026. Panduan lomba menjadi acuan cakupan tema Kemahasiswaan dan AIK. Screenshot referensi digunakan sebagai inspirasi tata letak dan dirancang ulang untuk identitas SiberMu.</p></div>
+        <div class="mt-5 space-y-2 text-[9.5px] leading-[1.4]"><div class="grid grid-cols-[34mm_1fr] gap-3 border-t border-slate-200 pt-2"><strong>Konten AI</strong><span class="text-slate-600">Hero scene3.webp–scene6.webp, bem.webp (Kemahasiswaan), kajian.webp (AIK), dan mulai.webp (Final CTA).</span></div><div class="grid grid-cols-[34mm_1fr] gap-3 border-t border-slate-200 pt-2"><strong>Instagram SiberMu</strong><span class="text-slate-600"><a class="text-[#078db6] underline" href="https://www.instagram.com/sibermu/">@sibermu</a>: student.png serta winner/winner1.webp dan winner/winner2.webp pada section Prestasi. Tautan posting spesifik belum dicatat.</span></div><div class="grid grid-cols-[34mm_1fr] gap-3 border-t border-slate-200 pt-2"><strong>Website SiberMu & aset lokal</strong><span class="text-slate-600">kampus-virtual.webp bersumber dari <a class="text-[#078db6] underline" href="https://sibermu.ac.id/">website SiberMu</a>. Asal distribusi/lisensi aisa.webp, logo-only.png, sibermu-logo.png, sibermu-white.png, dan enam logo src/assets/prodi/ belum tercatat; konfirmasikan kepada pemilik.</span></div><div class="grid grid-cols-[34mm_1fr] gap-3 border-t border-slate-200 pt-2"><strong>Ikon dan font</strong><span class="text-slate-600"><a class="text-[#078db6] underline" href="https://lucide.dev/">Lucide Icons (@lucide/vue)</a>; Geist, Inter Tight, dan TASA Explorer dari Google Fonts.</span></div><div class="grid grid-cols-[34mm_1fr] gap-3 border-t border-slate-200 pt-2"><strong>UI</strong><span class="text-slate-600">Komponen interaktif Reka UI; styling dan utility CSS Tailwind CSS. Informasi kampus mengacu <a class="text-[#078db6] underline" href="https://sibermu.ac.id/">sibermu.ac.id</a>, panduan lomba, dan screenshot referensi yang dibagikan saat desain.</span></div></div>
+        <div class="mt-5 rounded-2xl border border-amber-200 bg-amber-50 p-4"><p class="text-[9px] font-bold tracking-[.15em] text-amber-800">CATATAN SEBELUM PENGUMPULAN</p><p class="mt-2 text-[10px] leading-4 text-amber-950/80">Pastikan sumber dan izin publikasi foto lokal dapat dibuktikan, lalu cantumkan kredit media pada halaman. Nama testimoni yang tampil merupakan nama contoh, bukan identitas mahasiswa terverifikasi.</p></div>
+        <footer class="page-footer flex justify-between border-t border-slate-200 pt-3 text-[9px] font-semibold tracking-[.12em] text-slate-400"><span>TIM DINAS LINGKUNGAN HIDUP PROVINSI DKI JAKARTA</span><span>04</span></footer>
+      </section>
+    </main>
+  </body>
+</html>

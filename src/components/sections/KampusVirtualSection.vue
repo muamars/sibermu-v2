@@ -47,7 +47,7 @@ function resetImageTilt() {
             href="https://sibermu.ac.id"
             target="_blank"
             rel="noopener noreferrer"
-            class="mt-6 inline-flex items-center gap-2 text-xs font-semibold text-white transition-colors hover:text-cyan-300"
+            class="mt-6 inline-flex items-center gap-2 text-xs font-semibold text-white transition-colors hover:text-[#078db6]"
           >
             Jelajahi Kampus Virtual
             <ArrowRight class="size-4" />
@@ -57,14 +57,14 @@ function resetImageTilt() {
 
       <div
         ref="imageFrame"
-        class="mt-8 overflow-hidden rounded-b-2xl [perspective:1000px] sm:mt-10 sm:rounded-b-[18px]"
+        class="mt-8 aspect-[16/10] overflow-hidden rounded-b-2xl [perspective:1000px] sm:mt-10 sm:aspect-[16/8] sm:rounded-b-[18px]"
         @pointermove="handleImagePointerMove"
         @pointerleave="resetImageTilt"
       >
         <img
           :src="campusImage"
           alt="Visual kampus virtual SiberMu"
-          class="block w-full scale-[1.04] object-cover transition-transform duration-300 ease-out will-change-transform"
+          class="block h-full w-full scale-[1.04] object-cover transition-transform duration-300 ease-out will-change-transform"
           :style="{ transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) scale(1.04)` }"
         />
       </div>

@@ -10,7 +10,7 @@ withDefaults(
 
 const toneClasses: Record<string, string> = {
   primary: 'text-primary-600',
-  cyan: 'border-cyan-200 bg-cyan-50 text-cyan-600',
+  cyan: 'border-cyan-200 bg-cyan-50 text-[#078db6]',
   aik: 'border-aik-100 bg-aik-50 text-aik-600',
   light: 'border-white/30 bg-white/10 text-white',
   dark: 'border-border bg-surface text-foreground',

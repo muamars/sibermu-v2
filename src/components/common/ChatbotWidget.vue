@@ -95,7 +95,7 @@ watch(panelOpen, (open) => {
 </script>
 
 <template>
-  <div class="fixed right-4 bottom-8 z-[60] flex flex-col items-end gap-3 sm:right-6 sm:bottom-12">
+  <div class="fixed right-4 bottom-[calc(1.5rem+env(safe-area-inset-bottom))] z-[60] flex flex-col items-end gap-3 sm:right-6 sm:bottom-12">
     <Transition
       enter-active-class="transition duration-200 ease-out"
       enter-from-class="translate-y-3 scale-95 opacity-0"
@@ -106,7 +106,7 @@ watch(panelOpen, (open) => {
     >
       <section
         v-if="panelOpen"
-        class="flex h-[min(620px,calc(100dvh-112px))] w-[min(380px,calc(100vw-32px))] flex-col overflow-hidden shadow-2xl shadow-slate-900/20 rounded-2xl"
+        class="flex h-[min(620px,calc(100dvh-160px))] w-[min(380px,calc(100vw-32px))] flex-col overflow-hidden rounded-2xl shadow-2xl shadow-slate-900/20 sm:h-[min(620px,calc(100dvh-112px))]"
         aria-label="Chatbot Aisa"
       >
         <header class="flex items-center gap-3 px-5 py-4 text-white bg-primary-600">
@@ -122,7 +122,7 @@ watch(panelOpen, (open) => {
           </button>
         </header>
 
-        <div ref="conversation" class="flex-1 space-y-4 overflow-y-auto bg-slate-50/80 px-4 py-5" aria-live="polite">
+        <div ref="conversation" class="flex-1 space-y-4 overflow-y-auto bg-slate-50 px-4 py-5" aria-live="polite">
           <div v-for="item in messages" :key="item.id" class="flex" :class="item.role === 'user' ? 'justify-end' : 'justify-start'">
             <p
               class="max-w-[85%] whitespace-pre-wrap rounded-2xl px-4 py-3 text-sm leading-relaxed"
@@ -160,13 +160,13 @@ watch(panelOpen, (open) => {
 
     <button
       type="button"
-      class="flex size-1/12 items-center justify-center overflow-hidden text-white transition hover:-translate-y-0.5"
+      class="flex size-14 shrink-0 items-center justify-center overflow-visible text-white transition hover:-translate-y-0.5 md:size-25"
       :aria-expanded="panelOpen"
       :aria-label="panelOpen ? 'Tutup chatbot' : 'Buka chatbot'"
       @click="panelOpen = !panelOpen"
     >
       <X v-if="panelOpen" class="size-5" />
-      <img v-else :src="aisa" alt="" class="size-full object-cover" />
+      <img v-else :src="aisa" alt="" class="size-full object-contain" />
     </button>
   </div>
 </template>

@@ -130,7 +130,7 @@ watch(hoveredIndex, () => nextTick(measure))
 
         <button
           type="button"
-          class="inline-flex size-9 items-center justify-center rounded-full text-foreground transition-colors hover:bg-black/5 lg:hidden"
+          class="inline-flex size-11 shrink-0 items-center justify-center rounded-full text-foreground transition-colors hover:bg-black/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 lg:hidden"
           :aria-expanded="isOpen"
           aria-controls="mobile-menu"
           :aria-label="isOpen ? 'Tutup menu navigasi' : 'Buka menu navigasi'"

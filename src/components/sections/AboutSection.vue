@@ -2,17 +2,17 @@
 const pillars = [
   {
     number: '1',
-    title: 'Pembelajaran Digital',
+    title: 'Pembelajaran Jarak Jauh (PJJ)',
     description: 'Akses pembelajaran yang memungkinkan mahasiswa belajar lebih fleksibel, kapan pun dan di mana pun.',
   },
   {
     number: '2',
-    title: 'Teknologi untuk Pendidikan',
+    title: 'Pendidikan Berbasis Teknologi',
     description: 'Pembelajaran berbasis teknologi dirancang untuk menjawab kebutuhan pendidikan di era digital.',
   },
   {
     number: '3',
-    title: 'Ilmu yang Berpijak pada Nilai',
+    title: 'Ilmu yang Berpijak pada Nilai AIK',
     description: 'Al-Islam dan Kemuhammadiyahan menjadi sumber nilai dalam proses pendidikan dan kehidupan akademik.',
   },
   {
@@ -30,7 +30,7 @@ const pillars = [
 
     <div class="relative z-10 mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-16">
       <div class="max-w-[680px]">
-        <p class="mb-5 flex items-center gap-2 text-[9px] font-bold tracking-[0.2em] text-cyan-400 uppercase">
+        <p class="mb-5 flex items-center gap-2 text-[9px] font-bold tracking-[0.2em] text-[#078db6] uppercase">
           <span class="h-px w-3 bg-cyan-400" aria-hidden="true" />
           Sebuah Perjalanan
         </p>
@@ -38,7 +38,7 @@ const pillars = [
           Mengapa Memilih <span class="font-bold">SiberMu?</span>
         </h2>
         <p class="mt-5 max-w-[660px] text-sm leading-[1.8] text-white/80">
-          <span class="font-semibold text-cyan-400">SiberMu</span> hadir untuk menjawab perubahan tersebut melalui pendidikan tinggi berbasis teknologi yang fleksibel, modern, dan tetap berpijak pada nilai Islam berkemajuan. Ilmu tidak berhenti pada penguasaan pengetahuan. Ia menjadi bekal untuk berkarya, memberi manfaat, dan menjawab kebutuhan pendidikan. SiberMu menempatkan AIK sebagai sumber nilai dalam aktivitasnya dan menargetkan lulusan yang kompeten dalam ilmu/teknologi sekaligus berkarakter Islami.
+          <span class="font-semibold text-[#078db6]">SiberMu</span> hadir untuk menjawab perubahan tersebut melalui pendidikan tinggi berbasis teknologi yang fleksibel, modern, dan tetap berpijak pada nilai Islam berkemajuan. Ilmu tidak berhenti pada penguasaan pengetahuan. Ia menjadi bekal untuk berkarya, memberi manfaat, dan menjawab kebutuhan pendidikan. SiberMu menempatkan AIK sebagai sumber nilai dalam aktivitasnya dan menargetkan lulusan yang kompeten dalam ilmu/teknologi sekaligus berkarakter Islami.
         </p>
       </div>
 

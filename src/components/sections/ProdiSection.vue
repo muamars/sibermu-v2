@@ -78,18 +78,18 @@ const visiblePrograms = computed(() =>
 </script>
 
 <template>
-  <section id="prodi" class="px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-28">
+  <section id="prodi" class="px-4 sm:px-6 lg:px-10 ">
     <div class="mx-auto max-w-[1440px]">
       <div class="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
         <SectionHeading
-          eyebrow="Program Studi"
-          title="Temukan bidang yang ingin kamu dalami."
-          accent="yang ingin kamu dalami."
+          eyebrow="Pilihan Program Studi"
+          title="Program "
+          accent="Studi"
           description="Enam program sarjana jarak jauh memberi ruang untuk belajar sesuai minat dan arah masa depanmu."
         />
         <div class="flex shrink-0 items-end gap-3 border-l-2 border-primary-200 pl-5 lg:mb-1">
           <span class="text-6xl leading-none font-extrabold tracking-tight text-primary-600">06</span>
-          <span class="pb-1 text-sm leading-tight font-medium text-muted-foreground">program studi<br />sarjana PJJ</span>
+          <span class="pb-1 text-sm leading-tight font-medium text-muted-foreground">Program Studi<br />Sarjana PJJ</span>
         </div>
       </div>
 
