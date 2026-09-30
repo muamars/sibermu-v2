@@ -1,63 +1,57 @@
 <script setup lang="ts">
-import SectionHeading from '@/components/common/SectionHeading.vue'
-
-const stats = [
+const pillars = [
   {
-    value: '100%',
-    label: 'Pembelajaran Digital',
-    description: 'Belajar dengan fleksibel dari berbagai tempat.',
-    tone: 'accent',
+    number: '1',
+    title: 'Pembelajaran Digital',
+    description: 'Akses pembelajaran yang memungkinkan mahasiswa belajar lebih fleksibel, kapan pun dan di mana pun.',
   },
   {
-    value: 'Komunitas',
-    label: 'Ruang untuk Bertumbuh',
-    description: 'Bertemu, berkolaborasi, dan berkembang bersama.',
-    tone: 'plain',
+    number: '2',
+    title: 'Teknologi untuk Pendidikan',
+    description: 'Pembelajaran berbasis teknologi dirancang untuk menjawab kebutuhan pendidikan di era digital.',
   },
   {
-    value: 'Prestasi',
-    label: 'Dari Ide Menjadi Karya',
-    description: 'Mendorong mahasiswa untuk berani mencoba dan berkarya.',
-    tone: 'plain',
+    number: '3',
+    title: 'Ilmu yang Berpijak pada Nilai',
+    description: 'Al-Islam dan Kemuhammadiyahan menjadi sumber nilai dalam proses pendidikan dan kehidupan akademik.',
   },
   {
-    value: 'AIK',
-    label: 'Nilai dalam Setiap Langkah',
-    description: 'Menumbuhkan karakter melalui Islam Berkemajuan.',
-    tone: 'aik',
+    number: '4',
+    title: 'Ruang Untuk Bertumbuh',
+    description: 'Membangun kemampuan profesional sekaligus karakter Islami untuk menghadapi dunia yang terus berkembang.',
   },
 ]
 </script>
 
 <template>
-  <section class="px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-28">
-    <div class="mx-auto max-w-[1440px]">
-      <SectionHeading
-        eyebrow="Kehidupan Mahasiswa"
-        title="Kampus digital, tetap terasa dekat."
-        description="Jarak tidak membatasi mahasiswa SiberMu untuk saling terhubung. Melalui organisasi, komunitas, kegiatan, dan layanan mahasiswa, setiap orang memiliki ruang untuk mengenal potensi diri, membangun relasi, dan menciptakan pengalaman baru."
-      />
+  <section class="relative isolate overflow-hidden bg-[#0c2b43] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-10 lg:py-24">
+    <div class="pointer-events-none absolute -left-32 bottom-[-18rem] z-0 size-[34rem] rounded-full border border-white/[0.035] bg-white/[0.025]" aria-hidden="true" />
+    <div class="pointer-events-none absolute -left-20 bottom-[-15rem] z-0 size-[25rem] rounded-full border border-white/[0.04]" aria-hidden="true" />
 
-      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <div
-          v-for="stat in stats"
-          :key="stat.label"
-          class="flex flex-col gap-2 rounded-2xl border p-6"
-          :class="{
-            'border-cyan-200 bg-cyan-50': stat.tone === 'accent',
-            'border-border bg-white': stat.tone === 'plain',
-            'border-aik-100 bg-aik-50': stat.tone === 'aik',
-          }"
-        >
-          <span
-            class="text-2xl font-extrabold"
-            :class="stat.tone === 'aik' ? 'text-aik-600' : 'text-primary-700'"
-          >
-            {{ stat.value }}
+    <div class="relative z-10 mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-16">
+      <div class="max-w-[680px]">
+        <p class="mb-5 flex items-center gap-2 text-[9px] font-bold tracking-[0.2em] text-cyan-400 uppercase">
+          <span class="h-px w-3 bg-cyan-400" aria-hidden="true" />
+          Sebuah Perjalanan
+        </p>
+        <h2 class="text-balance text-[28px] leading-tight font-medium tracking-tight text-white sm:text-[36px] lg:text-[40px]">
+          Mengapa Memilih <span class="font-bold">SiberMu?</span>
+        </h2>
+        <p class="mt-5 max-w-[660px] text-sm leading-[1.8] text-white/80">
+          <span class="font-semibold text-cyan-400">SiberMu</span> hadir untuk menjawab perubahan tersebut melalui pendidikan tinggi berbasis teknologi yang fleksibel, modern, dan tetap berpijak pada nilai Islam berkemajuan. Ilmu tidak berhenti pada penguasaan pengetahuan. Ia menjadi bekal untuk berkarya, memberi manfaat, dan menjawab kebutuhan pendidikan. SiberMu menempatkan AIK sebagai sumber nilai dalam aktivitasnya dan menargetkan lulusan yang kompeten dalam ilmu/teknologi sekaligus berkarakter Islami.
+        </p>
+      </div>
+
+      <div class="grid gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-14">
+        <article v-for="pillar in pillars" :key="pillar.number" class="relative min-h-[120px]">
+          <span class="pointer-events-none absolute -top-14 -left-1 z-0 font-mono text-[88px] leading-none font-black text-white/[0.045] sm:text-[104px]" aria-hidden="true">
+            {{ pillar.number }}
           </span>
-          <span class="text-sm font-semibold text-foreground">{{ stat.label }}</span>
-          <p class="text-sm leading-relaxed text-muted-foreground">{{ stat.description }}</p>
-        </div>
+          <div class="relative z-10 pt-1">
+            <h3 class="text-sm font-semibold tracking-tight text-white sm:text-base">{{ pillar.title }}</h3>
+            <p class="mt-2 max-w-[290px] text-xs leading-relaxed text-white/75 sm:text-[13px]">{{ pillar.description }}</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>

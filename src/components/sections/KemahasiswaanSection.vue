@@ -1,56 +1,84 @@
 <script setup lang="ts">
-import { ArrowRight } from '@lucide/vue'
-import ImagePlaceholder from '@/components/common/ImagePlaceholder.vue'
-import SectionHeading from '@/components/common/SectionHeading.vue'
-import { studentActivities } from '@/data/studentActivities'
+import { BadgeCheck, BookOpenCheck, GraduationCap, UsersRound } from '@lucide/vue'
+import studentCommunity from '@/assets/scene3.webp'
 
-const toneCardClasses: Record<string, string> = {
-  primary: 'bg-primary-600 text-white',
-  light: 'bg-white text-foreground border border-border',
-  dark: 'bg-navy-950 text-white',
-}
+const highlights = [
+  {
+    number: '01',
+    title: 'Organisasi Mahasiswa',
+    description: 'Temukan ruang untuk berkolaborasi, mengambil peran, dan membangun pengalaman bersama.',
+    icon: UsersRound,
+  },
+  {
+    number: '02',
+    title: 'Unit Kegiatan Mahasiswa',
+    description: 'Kembangkan minat dan bakat melalui komunitas dan aktivitas yang sesuai dengan passion.',
+    icon: BookOpenCheck,
+  },
+  {
+    number: '03',
+    title: 'Prestasi Mahasiswa',
+    description: 'Apresiasi berbagai pencapaian mahasiswa di bidang akademik maupun non-akademik.',
+    icon: GraduationCap,
+  },
+  {
+    number: '04',
+    title: 'Layanan Mahasiswa',
+    description: 'Berbagai layanan yang mendukung perjalanan akademik dan kehidupan mahasiswa.',
+    icon: BadgeCheck,
+  },
+]
 </script>
 
 <template>
-  <section id="kemahasiswaan" class="px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-28">
-    <div class="mx-auto max-w-[1440px]">
-      <div class="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
-        <SectionHeading
-          eyebrow="Kemahasiswaan"
-          title="Lebih dari sekadar kuliah."
-          description="Masa kuliah bukan hanya tentang menyelesaikan mata kuliah. Ini adalah waktu untuk mencoba hal baru, menemukan lingkungan yang tepat, dan membangun pengalaman yang dibawa jauh setelah lulus."
-        />
-        <p class="max-w-xs text-lg font-semibold text-foreground/70 lg:text-right">
-          Temukan ruangmu. Tumbuh dengan caramu.
+  <section id="kemahasiswaan" class="px-4 pt-16 pb-8 sm:px-6 sm:pt-20 lg:px-10 lg:pt-24">
+    <div class="mx-auto grid max-w-[1440px] items-center gap-10 lg:grid-cols-[1fr_0.95fr] lg:gap-16">
+      <div>
+        <p class="mb-3 flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] text-primary-600 uppercase">
+          <span class="h-px w-3 bg-primary-500" aria-hidden="true" />
+          Kemahasiswaan
         </p>
-      </div>
+        <h2 class="max-w-xl text-balance text-[30px] leading-[1.08] font-extrabold tracking-tight text-foreground sm:text-[38px] lg:text-[42px]">
+          Ruang Untuk Tumbuh,<br /><span class="text-[#078db6]">Berkarya, dan Berprestasi.</span>
+        </h2>
 
-      <div class="mt-10 grid gap-5 lg:grid-cols-3">
-        <div
-          v-for="activity in studentActivities"
-          :key="activity.title"
-          class="group relative flex min-h-[380px] flex-col justify-between overflow-hidden rounded-3xl p-6 transition-transform duration-300 hover:-translate-y-1"
-          :class="toneCardClasses[activity.tone]"
-        >
-          <div class="relative z-10 flex flex-col gap-2">
-            <h3 class="text-xl font-bold">{{ activity.title }}</h3>
-            <p class="text-sm leading-relaxed opacity-80">{{ activity.description }}</p>
-          </div>
-
-          <div class="relative z-10 mt-6 h-40 overflow-hidden rounded-2xl">
-            <ImagePlaceholder
-              :tone="activity.tone === 'primary' ? 'cyan' : activity.tone === 'dark' ? 'navy' : 'neutral'"
-              :label="activity.imageHint"
-              rounded="rounded-2xl"
-            />
-          </div>
-
-          <a href="#prestasi" class="relative z-10 mt-6 inline-flex items-center gap-1.5 text-sm font-semibold transition-transform group-hover:translate-x-1">
-            {{ activity.cta }}
-            <ArrowRight class="size-4" />
-          </a>
+        <div class="mt-7 grid gap-2 sm:grid-cols-2">
+          <article
+            v-for="item in highlights"
+            :key="item.number"
+            class="group relative overflow-hidden rounded-2xl border border-primary-100/80 bg-white/85 p-4 transition duration-300 hover:-translate-y-1 hover:border-primary-300 hover:shadow-[0_12px_30px_rgba(12,35,52,0.09)]"
+          >
+            <div class="flex items-start gap-3">
+              <span class="flex size-9 shrink-0 items-center justify-center rounded-xl bg-primary-50 text-primary-700 transition-colors group-hover:bg-primary-600 group-hover:text-white">
+                <component :is="item.icon" class="size-4" :stroke-width="1.8" />
+              </span>
+              <div class="min-w-0">
+                <div class="flex items-center gap-2">
+                  <span class="font-mono text-[9px] font-semibold text-primary-500">{{ item.number }}</span>
+                  <h3 class="text-sm leading-snug font-bold text-navy-950">{{ item.title }}</h3>
+                </div>
+                <p class="mt-1.5 text-xs leading-relaxed text-slate-600">{{ item.description }}</p>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
+
+      <figure class="group relative min-h-[280px] overflow-hidden rounded-[28px_28px_28px_8px] bg-navy-950 sm:min-h-[360px] lg:min-h-[390px]">
+        <img
+          :src="studentCommunity"
+          alt="Mahasiswa berdiskusi dan berkolaborasi dalam kegiatan bersama"
+          class="absolute inset-0 size-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/10 to-transparent" />
+      </figure>
+    </div>
+
+    <div class="mx-auto mt-12 flex max-w-[1440px] items-center gap-4 sm:mt-16" aria-hidden="true">
+      <span class="h-px flex-1 bg-border" />
+      <span class="text-center text-[9px] font-bold tracking-[0.18em] text-primary-600 uppercase">Karena bertumbuh bukan hanya tentang pencapaian</span>
+      <span class="h-px flex-1 bg-border" />
     </div>
   </section>
 </template>

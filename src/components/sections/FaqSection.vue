@@ -11,6 +11,7 @@ import { faqItems } from '@/data/faq'
         align="center"
         eyebrow="FAQ"
         title="Masih penasaran? Kami punya jawabannya."
+        accent="Kami punya jawabannya."
         description="Beberapa hal yang mungkin ingin kamu ketahui tentang kehidupan mahasiswa di SiberMu."
       />
 

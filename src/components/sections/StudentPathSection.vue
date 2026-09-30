@@ -18,7 +18,7 @@ import { studentPath } from '@/data/studentPath'
           <div class="flex flex-col gap-3 sm:max-w-md">
             <SectionBadge tone="primary">Jalanmu di SiberMu</SectionBadge>
             <h2 class="text-balance text-[28px] leading-[1.1] font-extrabold text-foreground sm:text-[34px]">
-              Banyak cara untuk bertumbuh.
+              Banyak cara <span class="text-[#078db6]">untuk bertumbuh.</span>
             </h2>
             <p class="text-sm leading-relaxed text-muted-foreground sm:text-base">
               Setiap mahasiswa punya perjalanan yang berbeda. Pilih ruang yang paling

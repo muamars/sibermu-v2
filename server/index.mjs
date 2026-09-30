@@ -2,7 +2,6 @@ import { createReadStream, existsSync, statSync } from 'node:fs'
 import { createServer } from 'node:http'
 import { extname, join, normalize } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { chatController } from './controllers/chatController.mjs'
 
 const root = fileURLToPath(new URL('../', import.meta.url))
 const dist = join(root, 'dist')
@@ -21,16 +20,6 @@ const contentTypes = {
 
 const server = createServer(async (request, response) => {
   const url = new URL(request.url || '/', `http://${request.headers.host || 'localhost'}`)
-
-  if (url.pathname === '/api/chat') {
-    if (request.method !== 'POST') {
-      response.writeHead(405, { Allow: 'POST', 'Content-Type': 'application/json; charset=utf-8' })
-      response.end(JSON.stringify({ message: 'Method not allowed' }))
-      return
-    }
-    await chatController(request, response)
-    return
-  }
 
   if (request.method !== 'GET' && request.method !== 'HEAD') {
     response.writeHead(405, { Allow: 'GET, HEAD' })

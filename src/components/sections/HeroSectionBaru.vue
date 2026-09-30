@@ -56,27 +56,34 @@ function goToScene(index: number) {
 
   const scrollableDistance = section.offsetHeight - window.innerHeight
   const sectionTop = section.getBoundingClientRect().top + window.scrollY
-  const progress = index / sceneCount
-  window.scrollTo({ top: sectionTop + progress * scrollableDistance, behavior: 'smooth' })
+  // +0.5 supaya posisi tepat di tengah range scene (menghindari error pembulatan floor)
+  const progress = (index + 0.5) / sceneCount
+
+  activeScene.value = index
+  window.scrollTo({ top: sectionTop + progress * scrollableDistance, behavior: 'instant' })
 }
 
 function handleWheel(event: WheelEvent) {
   const section = sectionRef.value
-  if (!section || wheelLocked || event.deltaY === 0) return
+  if (!section || event.deltaY === 0) return
 
+  // Hanya aktif saat hero sedang "menempel" (sticky) di layar
   const rect = section.getBoundingClientRect()
-  const isInsideHero = rect.top < window.innerHeight && rect.bottom > 0
-  if (!isInsideHero) return
+  const isPinned = rect.top <= 0 && rect.bottom >= window.innerHeight
+  if (!isPinned) return
 
   const nextScene = activeScene.value + (event.deltaY > 0 ? 1 : -1)
+  // Di slide pertama/terakhir, biarkan halaman scroll normal keluar dari hero
   if (nextScene < 0 || nextScene >= sceneCount) return
 
   event.preventDefault()
+  if (wheelLocked) return
+
   wheelLocked = true
   goToScene(nextScene)
   window.setTimeout(() => {
     wheelLocked = false
-  }, 650)
+  }, 500)
 }
 
 onMounted(() => {
@@ -134,13 +141,13 @@ onUnmounted(() => {
                 v-if="currentScene.variant === 'hero'"
                 class="mt-4 text-balance text-[42px] leading-[0.98] font-bold tracking-[-0.04em] text-white sm:text-[58px] lg:text-[72px]"
               >
-                {{ currentScene.title }}
+                {{ currentScene.titleAccent ? currentScene.title.replace(currentScene.titleAccent, '') : currentScene.title }}<span v-if="currentScene.titleAccent" class="text-cyan-300">{{ currentScene.titleAccent }}</span>
               </h1>
               <h2
                 v-else
                 class="mt-4 text-balance text-[34px] leading-[1.03] font-bold tracking-[-0.035em] text-white sm:text-[44px] lg:text-[54px]"
               >
-                {{ currentScene.title }}
+                {{ currentScene.titleAccent ? currentScene.title.replace(currentScene.titleAccent, '') : currentScene.title }}<span v-if="currentScene.titleAccent" class="text-cyan-300">{{ currentScene.titleAccent }}</span>
               </h2>
 
               <p

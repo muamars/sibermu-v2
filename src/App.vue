@@ -14,6 +14,7 @@ import FinalCtaSection from '@/components/sections/FinalCtaSection.vue'
 import HeroSection from '@/components/sections/HeroSection.vue'
 import HighlightBanner from '@/components/sections/HighlightBanner.vue'
 import KemahasiswaanSection from '@/components/sections/KemahasiswaanSection.vue'
+import KampusVirtualSection from '@/components/sections/KampusVirtualSection.vue'
 import ProdiSection from '@/components/sections/ProdiSection.vue'
 import ServicesSection from '@/components/sections/ServicesSection.vue'
 import StudentPathSection from '@/components/sections/StudentPathSection.vue'
@@ -34,16 +35,17 @@ const prefersReducedMotion = usePrefersReducedMotion()
     <AboutSection />
     <ProdiSection />
     <KemahasiswaanSection />
-    <StudentPathSection />
-    <AchievementSection />
     <AikSection />
-    <BridgeSection />
+    <!-- <StudentPathSection /> -->
+    <AchievementSection />
+    <!-- <BridgeSection /> -->
     <ServicesSection />
     <StudentStories />
     <FaqSection />
     <FinalCtaSection />
   </main>
 
+  <KampusVirtualSection />
   <AppFooter />
   <ChatbotWidget />
 </template>

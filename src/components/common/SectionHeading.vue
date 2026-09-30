@@ -5,6 +5,7 @@ withDefaults(
   defineProps<{
     eyebrow?: string
     title: string
+    accent?: string
     description?: string
     align?: 'left' | 'center'
     tone?: 'primary' | 'cyan' | 'aik' | 'light' | 'dark'
@@ -30,7 +31,9 @@ withDefaults(
         ? 'text-[32px] leading-[1.08] sm:text-[40px] lg:text-[48px]'
         : 'text-[26px] leading-[1.1] sm:text-[30px] lg:text-[34px]'"
     >
-      <slot name="title">{{ title }}</slot>
+      <slot name="title">
+        {{ accent ? title.replace(accent, '') : title }}<span v-if="accent" class="text-[#078db6]">{{ accent }}</span>
+      </slot>
     </h2>
     <p
       v-if="description"

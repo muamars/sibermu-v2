@@ -84,6 +84,7 @@ const visiblePrograms = computed(() =>
         <SectionHeading
           eyebrow="Program Studi"
           title="Temukan bidang yang ingin kamu dalami."
+          accent="yang ingin kamu dalami."
           description="Enam program sarjana jarak jauh memberi ruang untuk belajar sesuai minat dan arah masa depanmu."
         />
         <div class="flex shrink-0 items-end gap-3 border-l-2 border-primary-200 pl-5 lg:mb-1">

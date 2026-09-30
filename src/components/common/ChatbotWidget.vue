@@ -9,7 +9,7 @@ type ChatMessage = {
   text: string
 }
 
-const chatApiUrl = '/api/chat'
+const chatApiUrl = 'https://dlh-n8n.nurarif.in/webhook/sibermu'
 const sessionStorageKey = 'sibermu-chat-session-id'
 const panelOpen = ref(false)
 const draft = ref('')
@@ -106,12 +106,12 @@ watch(panelOpen, (open) => {
     >
       <section
         v-if="panelOpen"
-        class="flex h-[min(620px,calc(100dvh-112px))] w-[min(380px,calc(100vw-32px))] flex-col overflow-hidden shadow-2xl shadow-slate-900/20"
+        class="flex h-[min(620px,calc(100dvh-112px))] w-[min(380px,calc(100vw-32px))] flex-col overflow-hidden shadow-2xl shadow-slate-900/20 rounded-2xl"
         aria-label="Chatbot Aisa"
       >
-        <header class="flex items-center gap-3 px-5 py-4 text-white">
-          <div class="flex size-10 items-center justify-center rounded-2xl bg-white/15">
-            <img :src="aisa" alt="aisa" class="size-9 object-cover" />
+        <header class="flex items-center gap-3 px-5 py-4 text-white bg-primary-600">
+          <div class="flex items-center justify-center">
+            <img :src="aisa" alt="aisa" class="size-16 object-contain" />
           </div>
           <div class="min-w-0 flex-1">
             <h2 class="font-semibold">Aisa</h2>

@@ -32,7 +32,7 @@ import { Button } from '@/components/ui/button'
 
         <div class="flex flex-col gap-6">
           <h1 class="max-w-2xl text-balance text-[42px] leading-[1.02] font-extrabold tracking-tight text-white sm:text-[64px] lg:text-[76px]">
-              Tumbuh bersama Sibermu.
+              Tumbuh bersama <span class="text-cyan-300">Sibermu.</span>
           </h1>
 
           <p class="max-w-md text-base leading-relaxed text-white/80 sm:text-lg">
